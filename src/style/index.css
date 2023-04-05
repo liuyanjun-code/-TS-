@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font: 20px bold 'Courier';
+}
+#main {
+  width: 360px;
+  height: 360px;
+  background-color: #b7d4a8;
+  margin: 100px auto;
+  border-radius: 40px;
+  border: 10px solid black;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+#main #stage {
+  width: 304px;
+  height: 304px;
+  border: 2px solid black;
+}
+#main #score-panel {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+/*# sourceMappingURL=./index.css.map */

@@ -1,0 +1,63 @@
+@bg-color:#b7d4a8;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+body{
+  font: 20px bold 'Courier';
+}
+#main{
+  width: 360px;
+  height: 360px;
+  background-color:@bg-color;
+  margin: 100px auto;
+  border-radius: 40px;
+  border: 10px solid black;
+  // 开启弹性盒模型
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 20px;
+  #stage{
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    position: relative;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    // 蛇的样式
+    #snake{
+      &>div{
+        width: 10px;
+        height: 10px;
+        background-color: #000;
+        border: 1px solid @bg-color;
+        position: absolute;
+        box-sizing: border-box;
+      }
+    }
+    #food{
+      width: 10px;
+      height: 10px;
+      border: 1px solid @bg-color;
+      position: absolute;
+      left: 100px;
+      top: 40px;
+      display: flex;
+      flex-flow: wrap row;
+      justify-content: space-between;
+      align-content: space-between;
+      &>div{
+        width: 4px;
+        height: 4px;
+        background-color: black;
+      }
+    }
+  }
+  #score-panel{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
